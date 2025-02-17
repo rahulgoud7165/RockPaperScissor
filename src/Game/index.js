@@ -48,7 +48,7 @@ class Game extends Component {
   onGetButtonId = (id, image) => {
     const {choicesList} = this.props
     const number = Math.floor(Math.random() * choicesList.length)
-    if (choicesList[number].id === 'ROCK' && id === 'SCIRRORS') {
+    if (choicesList[number].id === 'ROCK' && id === 'SCISSORS') {
       this.setState(prevState => ({
         showResults: true,
         myChoice: [id, image],
@@ -64,7 +64,7 @@ class Game extends Component {
         score: prevState.score + 1,
         resultMessage: 'YOU WON',
       }))
-    } else if (choicesList[number].id === 'SCIRRORS' && id === 'ROCK') {
+    } else if (choicesList[number].id === 'SCISSORS' && id === 'ROCK') {
       this.setState(prevState => ({
         showResults: true,
         myChoice: [id, image],
@@ -72,7 +72,7 @@ class Game extends Component {
         score: prevState.score + 1,
         resultMessage: 'YOU WON',
       }))
-    } else if (choicesList[number].id === 'SCIRRORS' && id === 'PAPER') {
+    } else if (choicesList[number].id === 'SCISSORS' && id === 'PAPER') {
       this.setState(prevState => ({
         showResults: true,
         myChoice: [id, image],
